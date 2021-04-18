@@ -1,0 +1,257 @@
+// @import '~/assets/scss/mixin.scss';
+/* 清除内外边距 */
+body,div,span, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, button, input, textarea, /* form elements 表单元素 */
+th, td ,section{ /* table elements 表格元素 */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* 设置默认字体 */
+// @font-face {
+// 	font-family: "Rubik-Light";
+// 	src: url('~assets/font/Rubik-Light.ttf');
+// 	font-display: swap;
+// }
+// @font-face {
+// 	font-family: "Rubik-Bold";
+// 	src: url('~assets/font/Rubik-Bold.ttf');
+// 	font-display: swap;
+// }
+.ffb{
+	font-family: "Rubik-Bold", sans-serif;
+	font-display: swap;
+}
+body,
+button, input, select, textarea { /* for ie */
+	font-family: "Rubik-Light", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+	font-size: 14px;
+}
+input[type="text"]{
+	border-radius:0px;
+}
+body{
+	color: #384967;
+	font-size: 16px;
+	background-color: #fff;
+}
+
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+.fwb{ font-weight: bold!important;}
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+i,dfn,samp{
+	font-style: normal;
+}
+
+/* 重置文本格式元素 */
+body a { text-decoration: none; color: #384967; }
+body a:hover { text-decoration: none; color: #384967; }
+
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+img { border: none; vertical-align: top; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+	outline: none;
+	font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+/* 重置表格元素 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+/* 重置 hr */
+hr {
+  border: none;
+	height: 1px;
+	clear: both;
+}
+
+/*超出内容显示省略号*/
+.ellipsis{  max-width: 100%;  white-space: nowrap;  text-overflow:ellipsis;  overflow:hidden;  }
+/*清除浮动*/
+.clearfix {  *zoom: 1;  }
+.clearfix:before,
+.clearfix:after {  display: table;  line-height: 0;  content: "";  }
+.clearfix:after {  clear: both;  }
+
+// 自定义滚动条
+.scrollbar{ overflow-y: auto; }
+.scrollbar::-webkit-scrollbar { width: 8px;  }
+.scrollbar::-webkit-scrollbar-track { background-color: #eeeeee;  border-radius: 4px; }
+.scrollbar::-webkit-scrollbar-thumb { border-radius: 4px;  background-color: #d3d3d3; }
+
+
+//页面常用代码
+.maxw_100{ max-width: 100%;}
+.w_100{ width: 100px!important; }
+.w_150{ width: 150px!important; }
+
+//间距
+.mt0{ margin-top: 0!important;}
+.mt5{ margin-top: 5px!important;}
+.mt10{ margin-top: 10px!important;}
+.mt15{ margin-top: 15px!important;}
+.mt20{ margin-top: 20px!important;}
+.mt30{ margin-top: 30px!important;}
+.mt40{ margin-top: 40px!important;}
+.mt50{ margin-top: 50px!important;}
+.mt80{ margin-top: 80px!important;}
+.mt100{ margin-top: 100px!important;}
+
+.mb0{ margin-bottom: 0!important;}
+
+.pl0{ padding-left: 0!important;}
+.pl10{ padding-left: 10px!important;}
+.pl15{ padding-left: 15px!important;}
+.pl20{ padding-left: 20px!important;}
+
+.pb0{padding-bottom: 0!important;}
+.pt0{padding-top: 0!important;}
+
+//文字颜色
+.red{ color: #dc5858!important;}
+.green{ color: #bdffa1!important;}
+.orange{ color: #ffad4b!important;}
+
+.fr{	float: right!important;}
+.fl{ float: left!important;}
+
+//显示隐藏
+.hide{ display: none!important;}
+.show{ display: block!important;}
+
+// 透明度
+.opc8{ opacity: 0.8;}
+.opc5{ opacity: 0.5;}
+
+//font-size
+.fs12{font-size: 12px!important;}
+.fs14{font-size: 14px!important;}
+
+//文字对齐
+.text_c{ text-align: center!important;}
+.text_l{ text-align: left!important;}
+.text_r{ text-align: right!important;}
+
+.fwn{
+	font-weight: normal!important;
+}
+//边框
+.border_b{ border-bottom: 1px solid #384967;}
+
+//模糊
+.filter5{
+	-webkit-filter: blur(5px); /* Chrome, Opera ,里面2px就是羽化像素2px。*/
+	-ms-filter: blur(5px);    /* Internet Explorer 9+*/
+	filter: blur(5px);  /* 火狐*/
+}
+
+// 输入框提示
+.input{
+	
+}
+.input_error{
+	border-color: #fe507c!important;
+}
+.vTip{
+	color: #fe507c;
+	position: absolute;
+	left: 0;
+	bottom: -24px;
+}
+
+.blur2{
+	-webkit-filter: blur(2px);
+}
+.blur4{
+	-webkit-filter: blur(4px);
+}
+
+.close{
+	opacity: 0.9;
+}
+.close:hover{
+	opacity: 1;
+}
+
+
+//按钮
+.btn{
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	background-color: #bdffa1;
+	color: #384967;
+	border-radius: 20px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 30px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 16px;
+	&:hover{
+		text-decoration: none;
+		color: #000;
+		background-color: #b4fb95;
+	}
+}
+.btn_disable{
+	color: #6986bd99!important;
+  background-color: #dbe3f3!important;
+}
+
+
+.input_box{
+	position: relative;
+	.input_name{
+		position: absolute;
+		left: 0;
+		top: 50%;
+		-webkit-transition: all 0.2s ease-out 0s;
+		transform: translateY(-50%);
+		color: #f9fafb;
+	}
+	.input_name.input_error{
+		color: #a33541!important;
+	}
+	input{
+		margin: 0;
+		padding: 0;
+		border: none;
+		border-bottom: 2px solid rgba(189,255,161,0.9);
+		border-radius: 0;
+		padding-left: 0px;
+		position: relative;
+		z-index: 1;
+		background: none;
+	}
+}
+.input_name_run{
+	.input_name{
+		opacity: 0.7;
+		transform: translateY(-170%);
+	}
+}
+
+
+
